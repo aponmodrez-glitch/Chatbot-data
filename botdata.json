@@ -1,166 +1,150 @@
 {
-  "meta": {
-    "version": "1.1",
-    "engine": "rule-based-dynamic-ai",
-    "description": "Lightweight AI-like chatbot logic using JSON rules"
-  },
-
-  "memory": {
-    "name": null,
-    "gaveHelp": false,
-    "askedQuestion": false
-  },
-
   "rules": [
-
     {
-      "id": "set_name",
       "pattern": "my name is (\\w+)",
-      "capture": ["name"],
-      "response": "Oh! <b>${name}</b>, how are you? 🤗",
-      "set": {
-        "name": "${name}",
-        "gaveHelp": true
-      }
+      "response": "Oh! ${name}, how are you? 🤗",
+      "set": { "name": true }
     },
-
     {
-      "id": "ask_question",
       "pattern": "ask me a question",
       "response": "What is your name?",
-      "set": {
-        "askedQuestion": true
-      }
+      "set": { "askedQuestion": true }
     },
-
     {
-      "id": "smart_thanks",
       "pattern": "thank you|thanks",
       "conditional": {
-        "if": "gaveHelp",
-        "true": "You are most welcome! 😄",
-        "false": "Thank you? But why 😅"
+        "gaveHelp": "You are most welcome! 😄",
+        "default": "Thank you? But why 😅"
       }
     },
-
     {
-      "id": "hello",
-      "pattern": "\\bhello\\b",
-      "response": "Hello! <b>How are you?</b> 😊"
+      "pattern": "hello",
+      "response": "Hello! How are you? 😊"
     },
-
     {
-      "id": "hi",
-      "pattern": "\\bhi\\b",
-      "response": "Hi there! <b>How's it going?</b> 😄"
+      "pattern": "hi",
+      "response": "Hi there! How's it going? 😄"
     },
-
     {
-      "id": "hey",
-      "pattern": "\\bhey\\b",
-      "response": "Hey! <b>What's up?</b> 😎"
+      "pattern": "hey",
+      "response": "Hey! What's up? 😎"
     },
-
     {
-      "id": "how_are_you",
       "pattern": "how are you",
-      "response": "I'm doing <b>great</b>, thank you! 🤗"
+      "response": "I'm doing great, thank you! 🤗"
     },
-
     {
-      "id": "bot_name",
-      "pattern": "what is your name|\\bname\\b",
-      "response": "I am <b>ChatBot</b> 🤖"
+      "pattern": "what is your name|name",
+      "response": "I am ChatBot 🤖"
     },
-
     {
-      "id": "good_morning",
       "pattern": "good morning",
-      "response": "Good morning! <b>Have a fantastic day!</b> ☀️"
+      "response": "Good morning! Have a fantastic day! ☀️"
     },
-
     {
-      "id": "good_night",
       "pattern": "good night",
-      "response": "Good night! <b>Sleep well!</b> 🌙"
+      "response": "Good night! Sleep well! 🌙"
     },
-
     {
-      "id": "bye",
-      "pattern": "\\bbye\\b|see you",
-      "response": "Goodbye! <b>See you soon!</b> 👋"
+      "pattern": "bye",
+      "response": "Goodbye! See you soon! 👋"
     },
-
     {
-      "id": "abilities",
+      "pattern": "see you",
+      "response": "See you! Take care! ✌️"
+    },
+    {
       "pattern": "what can you do",
-      "response": "I can <b>chat</b>, <b>answer questions</b>, and <b>entertain</b> you! 🎉",
-      "set": {
-        "gaveHelp": true
-      }
+      "response": "I can chat, answer questions, and entertain you! 🎉"
     },
-
     {
-      "id": "age",
       "pattern": "how old are you",
-      "response": "I am <b>ageless</b>! 😎"
+      "response": "I am ageless! 😎"
     },
-
     {
-      "id": "human",
       "pattern": "are you human",
-      "response": "Nope! I am an <b>AI ChatBot</b> 🤖"
+      "response": "Nope! I am an AI ChatBot 🤖"
     },
-
     {
-      "id": "creator",
+      "pattern": "where are you from",
+      "response": "I exist in the digital world 🌐"
+    },
+    {
       "pattern": "who created you",
-      "response": "I was created by <b>amazing developers</b>! 👨‍💻"
+      "response": "I was created by amazing developers! 👨‍💻"
     },
-
     {
-      "id": "joke",
       "pattern": "joke|tell me a joke",
-      "response": "Why did the computer go to the doctor? Because it caught a <b>virus</b>! 😆",
-      "set": {
-        "gaveHelp": true
-      }
+      "response": "Why did the computer go to the doctor? Because it caught a virus! 😆"
     },
-
     {
-      "id": "love",
+      "pattern": "how is the weather",
+      "response": "I cannot check live weather, but hope it's nice! ☀️"
+    },
+    {
       "pattern": "i love you",
-      "response": "Aww! <b>I love chatting with you too!</b> 💖"
+      "response": "Aww! I love chatting with you too! 💖"
     },
-
     {
-      "id": "sad",
-      "pattern": "i am sad|sad",
-      "response": "I'm here for you 🤗 <b>Everything will be okay</b>",
-      "set": {
-        "gaveHelp": true
-      }
+      "pattern": "i miss you",
+      "response": "I am always here for you 🤗"
     },
-
     {
-      "id": "happy",
-      "pattern": "i am happy|happy",
-      "response": "Yay! <b>Stay happy!</b> 😄"
+      "pattern": "are you single",
+      "response": "I am single and ready to chat! 😎"
     },
-
     {
-      "id": "help",
+      "pattern": "what time is it",
+      "response": "I don't have a clock, but it's always chat time! ⏰"
+    },
+    {
+      "pattern": "favorite color",
+      "response": "I like digital blue 💙"
+    },
+    {
+      "pattern": "do you have friends",
+      "response": "I have many chat buddies like you! 😄"
+    },
+    {
       "pattern": "can you help me|help",
-      "response": "Of course! <b>Ask me anything!</b> ✅",
-      "set": {
-        "gaveHelp": true
-      }
+      "response": "Of course! Ask me anything! ✅"
+    },
+    {
+      "pattern": "who are you",
+      "response": "I am ChatBot, your friendly AI companion 🤖"
+    },
+    {
+      "pattern": "what is ai",
+      "response": "AI stands for Artificial Intelligence 🧠"
+    },
+    {
+      "pattern": "i am sad",
+      "response": "I'm here for you! Don't worry, be happy! 😊"
+    },
+    {
+      "pattern": "i am happy",
+      "response": "Yay! Stay happy! 😄"
+    },
+    {
+      "pattern": "congratulations",
+      "response": "Congratulations! Well done! 🎉"
+    },
+    {
+      "pattern": "good job",
+      "response": "Thanks! Keep it up! 👍"
+    },
+    {
+      "pattern": "do you sleep",
+      "response": "Nope! I am always awake and ready to chat! 🌙"
+    },
+    {
+      "pattern": "are you smart",
+      "response": "I try my best to be smart 🤓"
+    },
+    {
+      "pattern": "are you funny",
+      "response": "I like to think so! 😆"
     }
-
   ],
-
-  "fallback": {
-    "short_input": "Can you say that again? 🤔",
-    "unknown": "Sorry, I didn't <b>understand</b> that 😅"
-  }
+  "default": "Sorry, I didn't understand that 😅"
 }
