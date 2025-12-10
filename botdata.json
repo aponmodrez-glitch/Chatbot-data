@@ -1,40 +1,153 @@
 {
-  "meta": {
-    "version": "1.2",
-    "generated": true,
-    "count_rules": 1200
-  },
-  "templates": {
-    "greetings": [
-      "Hello! 😊 How are you?",
-      "Hey there! 😄",
-      "Hi! Nice to see you 🤗",
-      "Hello human 👋"
-    ],
-    "thanks_positive": [
-      "You are most welcome 😄",
-      "Always happy to help 🤗",
-      "My pleasure ✅"
-    ],
-    "thanks_confused": [
-      "Thank you? But why 😅",
-      "I didn't help yet 🤔"
-    ],
-    "ask_name": [
-      "What is your name?",
-      "May I know your name? 😊",
-      "Sure — what's your name?"
-    ],
-    "help_positive": [
-      "Of course! Ask me anything ✅",
-      "Sure 🤗 I'm here to help!"
-    ],
-    "mood_sad": [
-      "I'm here for you 🤗 Don't be sad",
-      "Everything will be okay 😊",
-      "I care — want to talk about it?"
-    ],
-    "mood_happy": [
+  "rules": [
+    {
+      "pattern": "my name is (\\w+)",
+      "response": "Oh! ${name}, how are you? 🤗",
+      "set": { "name": true }
+    },
+    {
+      "pattern": "ask me a question",
+      "response": "What is your name?",
+      "set": { "askedQuestion": true }
+    },
+    {
+      "pattern": "thank you|thanks",
+      "conditional": {
+        "gaveHelp": "You are most welcome! 😄",
+        "default": "Thank you? But why 😅"
+      }
+    },
+    {
+      "pattern": "hello",
+      "response": "Hello! How are you? 😊"
+    },
+    {
+      "pattern": "hi",
+      "response": "Hi there! How's it going? 😄"
+    },
+    {
+      "pattern": "hey",
+      "response": "Hey! What's up? 😎"
+    },
+    {
+      "pattern": "how are you",
+      "response": "I'm doing great, thank you! 🤗"
+    },
+    {
+      "pattern": "what is your name|name",
+      "response": "I am ChatBot 🤖"
+    },
+    {
+      "pattern": "good morning",
+      "response": "Good morning! Have a fantastic day! ☀️"
+    },
+    {
+      "pattern": "good night",
+      "response": "Good night! Sleep well! 🌙"
+    },
+    {
+      "pattern": "bye",
+      "response": "Goodbye! See you soon! 👋"
+    },
+    {
+      "pattern": "see you",
+      "response": "See you! Take care! ✌️"
+    },
+    {
+      "pattern": "what can you do",
+      "response": "I can chat, answer questions, and entertain you! 🎉"
+    },
+    {
+      "pattern": "how old are you",
+      "response": "I am ageless! 😎"
+    },
+    {
+      "pattern": "are you human",
+      "response": "Nope! I am an AI ChatBot 🤖"
+    },
+    {
+      "pattern": "where are you from",
+      "response": "I exist in the digital world 🌐"
+    },
+    {
+      "pattern": "who created you",
+      "response": "I was created by amazing developers! 👨‍💻"
+    },
+    {
+      "pattern": "joke|tell me a joke",
+      "response": "Why did the computer go to the doctor? Because it caught a virus! 😆"
+    },
+    {
+      "pattern": "how is the weather",
+      "response": "I cannot check live weather, but hope it's nice! ☀️"
+    },
+    {
+      "pattern": "i love you",
+      "response": "Aww! I love chatting with you too! 💖"
+    },
+    {
+      "pattern": "i miss you",
+      "response": "I am always here for you 🤗"
+    },
+    {
+      "pattern": "are you single",
+      "response": "I am single and ready to chat! 😎"
+    },
+    {
+      "pattern": "what time is it",
+      "response": "I don't have a clock, but it's always chat time! ⏰"
+    },
+    {
+      "pattern": "favorite color",
+      "response": "I like digital blue 💙"
+    },
+    {
+      "pattern": "do you have friends",
+      "response": "I have many chat buddies like you! 😄"
+    },
+    {
+      "pattern": "can you help me|help",
+      "response": "Of course! Ask me anything! ✅"
+    },
+    {
+      "pattern": "who are you",
+      "response": "I am ChatBot, your friendly AI companion 🤖"
+    },
+    {
+      "pattern": "what is ai",
+      "response": "AI stands for Artificial Intelligence 🧠"
+    },
+    {
+      "pattern": "i am sad",
+      "response": "I'm here for you! Don't worry, be happy! 😊"
+    },
+    {
+      "pattern": "i am happy",
+      "response": "Yay! Stay happy! 😄"
+    },
+    {
+      "pattern": "congratulations",
+      "response": "Congratulations! Well done! 🎉"
+    },
+    {
+      "pattern": "good job",
+      "response": "Thanks! Keep it up! 👍"
+    },
+    {
+      "pattern": "do you sleep",
+      "response": "Nope! I am always awake and ready to chat! 🌙"
+    },
+    {
+      "pattern": "are you smart",
+      "response": "I try my best to be smart 🤓"
+    },
+    {
+      "pattern": "are you funny",
+      "response": "I like to think so! 😆"
+    }
+  ],
+  "default": "Sorry, I didn't understand that 😅"
+}    "mood_happy": [
       "Yay! 😄 Stay happy!",
       "That's wonderful — keep smiling 😊"
     ],
