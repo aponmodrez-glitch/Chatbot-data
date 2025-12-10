@@ -1,4 +1,5 @@
-{"hello": "Hello! <b>How are you?</b> 😊",
+{
+  "hello": "Hello! <b>How are you?</b> 😊",
   "hi": "Hi there! <b>How's it going?</b> 😄",
   "hey": "Hey! <b>What's up?</b> 😎",
   "how are you": "I'm doing <b>great</b>, thank you! 🤗",
