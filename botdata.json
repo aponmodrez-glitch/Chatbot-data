@@ -1,0 +1,7 @@
+{
+  "hello": "Hello! <b>How are you?</b>",
+  "hi": "Hello! <b>How are you?</b>",
+  "how are you": "I'm doing <b>great</b>! 😎",
+  "name": "I am <b>ChatBot</b>!",
+  "default": "Sorry, I didn't <b>understand</b> that 😅"
+}
