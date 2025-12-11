@@ -1797,10 +1797,6 @@
   ],
 
   "default": [
-    "Sorry, I didn't get that 😅",
-    "Can you say that again?",
-    "I'm not sure I understand.",
-    "Hmm... could you try rephrasing?",
-    "I didn't catch that. 😕"
+    "Sorry, I didn't understand that 😅",
   ]
 }
