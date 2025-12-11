@@ -1,150 +1,112 @@
 {
   "rules": [
     {
-      "pattern": "my name is (\\w+)",
-      "response": "Oh! ${name}, how are you? 🤗",
-      "set": { "name": true }
-    },
-    {
-      "pattern": "ask me a question",
-      "response": "What is your name?",
-      "set": { "askedQuestion": true }
-    },
-    {
-      "pattern": "thank you|thanks",
-      "conditional": {
-        "gaveHelp": "You are most welcome! 😄",
-        "default": "Thank you? But why 😅"
-      }
-    },
-    {
-      "pattern": "hello",
-      "response": "Hello! How are you? 😊"
-    },
-    {
-      "pattern": "hi",
-      "response": "Hi there! How's it going? 😄"
-    },
-    {
-      "pattern": "hey",
-      "response": "Hey! What's up? 😎"
+      "pattern": "hi|hello|hey",
+      "response": [
+        "Hi there! 😊",
+        "Hello! How are you doing?",
+        "Hey! Nice to see you!",
+        "Hi! Hope you're having a good day!",
+        "Hello! What's up?"
+      ]
     },
     {
       "pattern": "how are you",
-      "response": "I'm doing great, thank you! 🤗"
+      "response": [
+        "I'm doing great! How about you? 🙂",
+        "I'm good! Thanks for asking. You?",
+        "Feeling awesome! How are you feeling?",
+        "I'm fine! What about you?",
+        "I'm doing well! Hope you are too."
+      ]
     },
     {
-      "pattern": "what is your name|name",
-      "response": "I am ChatBot 🤖"
+      "pattern": "what is your name|who are you",
+      "response": [
+        "I'm your friendly chatbot. 😊",
+        "I'm your virtual assistant!",
+        "I'm here just to chat with you!",
+        "I'm your AI chat buddy!",
+        "You can call me your Chat Assistant!"
+      ]
+    },
+    {
+      "pattern": "bye|goodbye|see you",
+      "response": [
+        "Goodbye! Take care. 😊",
+        "See you soon!",
+        "Bye! Have a wonderful day!",
+        "Talk to you later!",
+        "Goodbye! It was nice chatting with you!"
+      ]
+    },
+    {
+      "pattern": "thank you|thanks",
+      "response": [
+        "You're welcome! 😊",
+        "No problem! Glad to help!",
+        "Anytime! 😄",
+        "You're always welcome!",
+        "Happy to help!"
+      ]
+    },
+    {
+      "pattern": "ok|okay",
+      "response": [
+        "Alright! 😊",
+        "Okay! Let me know if you need anything.",
+        "Sure!",
+        "Got it!",
+        "Okay! I'm here."
+      ]
     },
     {
       "pattern": "good morning",
-      "response": "Good morning! Have a fantastic day! ☀️"
+      "response": [
+        "Good morning! 🌅",
+        "Morning! Hope your day starts well!",
+        "Good morning! Have a great day!",
+        "Morning! How are you today?",
+        "Good morning! 😊"
+      ]
     },
     {
       "pattern": "good night",
-      "response": "Good night! Sleep well! 🌙"
+      "response": [
+        "Good night! Sleep well. 🌙",
+        "Sweet dreams!",
+        "Good night! Take rest.",
+        "Have a peaceful night!",
+        "Good night! 😊"
+      ]
     },
     {
-      "pattern": "bye",
-      "response": "Goodbye! See you soon! 👋"
+      "pattern": "love you",
+      "response": [
+        "Aww! That's sweet 😊",
+        "Love you too! 💙",
+        "That's kind of you!",
+        "Sending love back to you! 💖",
+        "You're amazing!"
+      ]
     },
     {
-      "pattern": "see you",
-      "response": "See you! Take care! ✌️"
-    },
-    {
-      "pattern": "what can you do",
-      "response": "I can chat, answer questions, and entertain you! 🎉"
-    },
-    {
-      "pattern": "how old are you",
-      "response": "I am ageless! 😎"
-    },
-    {
-      "pattern": "are you human",
-      "response": "Nope! I am an AI ChatBot 🤖"
-    },
-    {
-      "pattern": "where are you from",
-      "response": "I exist in the digital world 🌐"
-    },
-    {
-      "pattern": "who created you",
-      "response": "I was created by amazing developers! 👨‍💻"
-    },
-    {
-      "pattern": "joke|tell me a joke",
-      "response": "Why did the computer go to the doctor? Because it caught a virus! 😆"
-    },
-    {
-      "pattern": "how is the weather",
-      "response": "I cannot check live weather, but hope it's nice! ☀️"
-    },
-    {
-      "pattern": "i love you",
-      "response": "Aww! I love chatting with you too! 💖"
-    },
-    {
-      "pattern": "i miss you",
-      "response": "I am always here for you 🤗"
-    },
-    {
-      "pattern": "are you single",
-      "response": "I am single and ready to chat! 😎"
-    },
-    {
-      "pattern": "what time is it",
-      "response": "I don't have a clock, but it's always chat time! ⏰"
-    },
-    {
-      "pattern": "favorite color",
-      "response": "I like digital blue 💙"
-    },
-    {
-      "pattern": "do you have friends",
-      "response": "I have many chat buddies like you! 😄"
-    },
-    {
-      "pattern": "can you help me|help",
-      "response": "Of course! Ask me anything! ✅"
-    },
-    {
-      "pattern": "who are you",
-      "response": "I am ChatBot, your friendly AI companion 🤖"
-    },
-    {
-      "pattern": "what is ai",
-      "response": "AI stands for Artificial Intelligence 🧠"
-    },
-    {
-      "pattern": "i am sad",
-      "response": "I'm here for you! Don't worry, be happy! 😊"
-    },
-    {
-      "pattern": "i am happy",
-      "response": "Yay! Stay happy! 😄"
-    },
-    {
-      "pattern": "congratulations",
-      "response": "Congratulations! Well done! 🎉"
-    },
-    {
-      "pattern": "good job",
-      "response": "Thanks! Keep it up! 👍"
-    },
-    {
-      "pattern": "do you sleep",
-      "response": "Nope! I am always awake and ready to chat! 🌙"
-    },
-    {
-      "pattern": "are you smart",
-      "response": "I try my best to be smart 🤓"
-    },
-    {
-      "pattern": "are you funny",
-      "response": "I like to think so! 😆"
+      "pattern": "what are you doing",
+      "response": [
+        "Just chatting with you! 😊",
+        "Waiting to talk to you!",
+        "Nothing much, just here for you.",
+        "Thinking about what to reply next 😄",
+        "Just helping you out!"
+      ]
     }
   ],
-  "default": "Sorry, I didn't understand that 😅"
+
+  "default": [
+    "Sorry, I didn't get that 😅",
+    "Can you say that again?",
+    "I'm not sure I understand.",
+    "Hmm... could you try rephrasing?",
+    "I didn't catch that. 😕"
+  ]
 }
