@@ -32,6 +32,9 @@
     {
       "pattern": "how are you",
       "response": "I'm doing great, thank you! 🤗"
+      "response": "I'm well"
+      "response": "I'm doing well 😊"
+      "response": "I'm doing nice"
     },
     {
       "pattern": "what is your name|name",
