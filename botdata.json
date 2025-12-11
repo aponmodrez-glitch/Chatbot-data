@@ -21,6 +21,23 @@
       ]
     },
     {
+      "pattern": "my name is (\\w+)",
+      "response": "Oh! ${name}, how are you? 🤗",
+      "set": { "name": true }
+    },
+    {
+      "pattern": "ask me a question",
+      "response": "What is your name?",
+      "set": { "askedQuestion": true }
+    },
+    {
+      "pattern": "thank you|thanks",
+      "conditional": {
+        "gaveHelp": "You are most welcome! 😄",
+        "default": "Thank you? But why 😅"
+      }
+    },
+    {
       "pattern": "what is your name|who are you",
       "response": [
         "I'm your friendly chatbot. 😊",
